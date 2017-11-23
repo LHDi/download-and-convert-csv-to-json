@@ -14,7 +14,7 @@ module.exports = (folder) => {
         for (let i in titles) { 
             obj[titles[i]] = person[i]
         }
-        json += `\n    ${JSON.stringify(obj)}`
+        json += `\n    ${JSON.stringify(obj, null, 2)}`
         if (i != csv.length) json += `, `
     }
     for(let person of csv) {
